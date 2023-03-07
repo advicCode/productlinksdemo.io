@@ -1,0 +1,36 @@
+<!--
+ - Created by jacob.murley on 3/6/23.
+ -->
+
+<!-- productDetailLinkOut -->
+<html>
+<style>
+    
+</style>
+
+<script src="https://kenblanchard--kbdevb2b.sandbox.my.site.com/lightning/lightning.out.js"></script>
+
+<div data-lightning-out="true"></div>
+<script>
+    const appName = 'c:lightningOutApp.app';
+    const componentName = 'c:productDetailLink';
+    const lightningEndPoint = 'https://kenblanchard--kbdevb2b.sandbox.my.site.com';
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {
+
+    };
+    $Lightning.use(
+        appName, function (){
+            $Lightning.createComponent(
+                componentName,
+                componentAttributes,
+                targetElement,
+                function (cmp){
+                    console.log('lightning component created');
+                }
+            );
+        },
+        lightningEndPoint
+    );
+</script>
+</html>
